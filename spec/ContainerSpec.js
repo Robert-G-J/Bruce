@@ -32,4 +32,8 @@ describe("A container", function() {
     expect(container3l.fluid).toEqual(3);
     expect(container5l.fluid).toEqual(2);
   })
+  it("raises error if destination Container is same as origin", function() {
+    container5l.fill();
+    expect(function() { container5l.transferFluidTo(container5l) }).toThrow("Cannot transfer to same container");
+  })
 })

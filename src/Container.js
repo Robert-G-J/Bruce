@@ -14,10 +14,11 @@ Container.prototype.empty = function() {
 }
 
 Container.prototype.transferFluidTo = function(destinationContainer) {
-  do {
+  if(destinationContainer === this) { throw("Cannot transfer to same container") }
+  while (destinationContainer.fluid < destinationContainer.capacity) {
     this.fluid -= 1;
     destinationContainer.fluid += 1;
-  } while (destinationContainer.fluid < destinationContainer.capacity);
+  }
 }
 
 
