@@ -3,9 +3,9 @@
 const Container = require('../src/Container.js')
 
 describe("A container", function() {
-  it("is initialised with a volume", function() {
+  it("is initialised with a capacity", function() {
     var container = new Container(3);
-    expect(container.volume).toEqual(3);
+    expect(container.capacity).toEqual(3);
   })
   it("has no fluid when created", function() {
     var container = new Container(5);
