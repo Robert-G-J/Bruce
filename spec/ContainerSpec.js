@@ -7,4 +7,8 @@ describe("A container", function() {
     var container = new Container(3);
     expect(container.volume).toEqual(3);
   })
+  it("has no fluid when created", function() {
+    var container = new Container(5);
+    expect(container.fluid).toEqual(0);
+  })
 })
