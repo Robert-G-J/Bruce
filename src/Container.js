@@ -9,4 +9,8 @@ Container.prototype.fill = function() {
   this.fluid = this.volume;
 }
 
+Container.prototype.empty = function() {
+  this.fluid = 0;
+}
+
 module.exports = Container;
