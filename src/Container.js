@@ -14,8 +14,11 @@ Container.prototype.empty = function() {
 }
 
 Container.prototype.transferFluidTo = function(destinationContainer) {
-  destinationContainer.fluid += this.fluid;
-  this.empty();
+  do {
+    this.fluid -= 1;
+    destinationContainer.fluid += 1;
+  } while (destinationContainer.fluid < destinationContainer.capacity);
 }
+
 
 module.exports = Container;
