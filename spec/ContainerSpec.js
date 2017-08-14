@@ -11,4 +11,9 @@ describe("A container", function() {
     var container = new Container(5);
     expect(container.fluid).toEqual(0);
   })
+  it("can be filled with fluid", function() {
+    var container = new Container(3);
+    container.fill();
+    expect(container.fluid).toEqual(3);
+  })
 })

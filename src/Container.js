@@ -5,4 +5,8 @@ function Container(volume) {
   this.fluid = 0;
 }
 
+Container.prototype.fill = function() {
+  this.fluid = this.volume;
+}
+
 module.exports = Container;
